@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Tandartsafspraak</title>
+  </head>
+
+  <body>
+    <h1>Tandartsafspraak</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id eleifend purus. Pellentesque euismod tincidunt felis, quis accumsan nunc pharetra viverra. Aenean euismod urna tortor, nec faucibus purus viverra nec. Curabitur tincidunt vestibulum mauris, id elementum ex maximus et. Nunc nibh lacus, accumsan eu consectetur at, efficitur fringilla purus. Donec ipsum lacus, ultricies sit amet ullamcorper quis, eleifend ut purus. Mauris laoreet leo urna, vitae cursus libero finibus quis. Mauris mi lorem, facilisis sagittis facilisis quis, aliquam eget nisl. Curabitur mollis quam eu luctus lacinia. Ut eu libero ac nisl ultricies euismod.
+    </p>
+
+    <img src="../afbeeldingen/tandarts1.jpg" title="tandarts" alt="tandarts" width="300">
+    <img src="../afbeeldingen/tandarts2.jpg" title="tandarts" alt="tandarts" width="300">
+    <img src="../afbeeldingen/tandarts3.jpg" title="tandarts" alt="tandarts" width="300">
+    <br><br>
+    <!-- Dit werkt niet via formspree.io -->
+    <!-- <form id="frm_afspraak" action="https://formspree.io/f/mvolydna" method="post" enctype="multipart/form-data"> -->
+    <!-- Dit werkt wel via formspree.io -->
+    <form id="frm_afspraak" action="https://formspree.io/f/mvolydna" method="post">
+
+      <fieldset>
+        <legend><b>Persoonlijke gegevens</b></legend>
+        <table>
+          <tr>
+            <td><label for="naam">Naam*:</label></td>
+            <td><input id="naam" type="text" name="naam" required></td>
+          </tr>
+          <tr>
+            <td><label for="geslacht">Geslacht:</label></td>
+            <td>
+              <input type="radio" name="geslacht" value="man" checked>Man
+              <input type="radio" name="geslacht" value="vrouw">Vrouw
+              <input type="radio" name="geslacht" value="anders">Anders
+            </td>
+          </tr>
+          <tr>
+            <td><label for="adres">Adres*:</label></td>
+            <td><input type="text" id="adres" name="adres" required></td>
+          </tr>
+          <tr>
+            <td><label for="postcode">Postcode*:</label></td>
+            <td><input type="text" id="postcode" name="postcode" required></td>
+          </tr>
+          <tr>
+            <td><label for=" woonplaats">Woonplaats*:</label></td>
+            <td><input type="text" id="woonplaats" name="woonplaats" required></td>
+          </tr>
+          <tr>
+            <td colspan="2">* Dit zijn verplichte velden.</td>
+          </tr>
+        </table>
+
+      </fieldset>
+      <br>
+      <fieldset>
+        <legend><b>Beschrijving van de klachten</b></legend>
+        Kies één of meerdere opties<br>
+        <input type="checkbox" name="klacht1" value="ja">Afgebroken tand <br>
+        <input type="checkbox" name="klacht2" value="ja">Bloedend tandvlees <br>
+        <input type="checkbox" name="klacht3" value="ja">Kiespijn<br>
+        <input type="checkbox" name="klacht4" value="ja">Vulling eruit<br><br>
+        <label for="profielfoto">Selecteer een foto</label>
+        <input type="file" id="foto" name="foto" accept="image/jpeg, image/jpg, image/gif, image/png">
+      </fieldset>
+      <br>
+      <fieldset>
+        <legend><b>Toelichting van de klachten</b></legend>
+        Geef een toelichting m.b.t. de klachten<br>
+        <textarea name="toelichting" maxlength="1500" rows="8" cols="80"></textarea><br>
+        Sinds wanneer doen de klachten zich voor<br>
+        <input type="date" name="datum" max="2080-12-31">
+      </fieldset>
+      <br>
+
+      <input type="submit" value="Verzend">
+
+    </form>
+  </body>
+</html>
